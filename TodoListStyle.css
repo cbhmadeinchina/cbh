@@ -1,0 +1,182 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    background-color: gainsboro;
+}
+#header {
+    height: 50px;
+    background-color: cornflowerblue;
+}
+#header h2 {
+    margin: 0 auto;
+    width: 40%;
+    float: left;
+    line-height: 50px;  /*设置line-height和包含块高度一致，以实现行内元素垂直居中*/
+    font-size: 20px;
+}
+
+#add_list {
+    float: right;
+    margin-top: 11px;
+    width: 60%;
+    height: 24px;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 black;
+    font-size: 18px;
+    text-indent: 10px;
+}
+
+.content {
+    width: 40%;
+    margin: 0 auto;
+}
+
+li {
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 0 10px;
+    height: 40px;
+    box-shadow: 0 1px 0 black;
+    line-height: 40px;
+    background-color: burlywood;
+    list-style: none;
+    text-align: center;
+}
+
+ol li input[id^="item-check-"]{
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+p{
+    margin: 0;
+}
+ol li p {
+    position: relative;
+    top: 4px;
+    left: 10px;
+    width: 500px;
+    height: 25px;
+    display: inline;
+    margin-left: 35px;
+    clear:left;
+    overflow: hidden;           /*??*/
+}
+
+ol li p input{
+    position:relative;
+    left:40px;
+    width:500px;
+    z-index: 1;
+    float:left;
+}
+
+ol li a {
+    position: relative;
+    top: 8px;
+    left:10px;
+    right: 10px;
+    display: inline-block;
+    border: 1px;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    color: red;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: gray;
+    float:right;
+}
+
+#clear {
+    width: 100px;
+    margin: 0 auto;
+}
+
+#clearAll {
+    border-color: red;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 yellow;
+    cursor: pointer;
+}
+
+#clearAll h3{
+    font-size: 10px;
+    line-height: 10px;
+}
+#footer{
+    width: 500px;
+    height:20px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+#newitem{              /*下部文本框*/
+    position: absolute;
+    left:40%;
+    width:500px;
+    bottom: 100px;
+}
+#add-item{             /*下部按钮*/
+    position: absolute;
+    border-color: red;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 yellow;
+    cursor: pointer;
+    bottom:40px;
+    left:50%;
+}
+#add-item h3{
+    font-size: 10px;
+    line-height: 10px;
+}
+
+/*去除系统默认的滑动条样式，主要针对基于webkit的浏览器*/
+input[type=range] {
+    -webkit-appearance: none;
+    background:transparent;
+    width: 100%;
+    margin: 0 5px;
+}
+/*原始的控件获取到焦点时，会显示包裹整个控件的边框，所以还需要把边框取消。*/
+input[type=range]:focus {
+    outline: none;
+}
+
+/*自定义滑动控件的轨道*/
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+    background: rgba(255,255,255,0.8);  /*滑动条轨道背景颜色*/
+    border-radius: 3.3px;
+    border: 0.2px solid rgba(1, 1, 1, 0);
+}
+/*自定义滑动控件的滑块*/
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+    border-radius: 50px;
+    background: #ffc600; /*和进度条的填充部分一个颜色*/
+    cursor: pointer;
+    margin-top: -3.5px;
+    box-shadow:0 0 2px rgba(0,0,0,0.2);
+}
+/*自定义滑动条获得焦点时的背景颜色*/
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #bada55;
+}
+
+
